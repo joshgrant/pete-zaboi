@@ -35,7 +35,7 @@ enum Ingredient: String, CaseIterable {
             guard let input = readLine()?.lowercased() else { continue }
             guard let newIngredient = Ingredient(rawValue: input) else { continue }
             ingredients.append(newIngredient)
-            print("Would you like to add more ingredients?")
+            print("Would you like to add more ingredients? [y/n]")
             if !Game.getChoice() {
                 more = false
             }

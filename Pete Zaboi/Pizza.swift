@@ -24,7 +24,7 @@ struct Pizza {
     let ingredients: [Ingredient]
     
     static func makeAPizza() -> Pizza {
-        print("Time to get the ingredients")
+        print("Time to get the ingredients. Enter one at a time:")
         let ingredients = Ingredient.gather()
         
         print("You gathered these ingredients:")
@@ -33,6 +33,12 @@ struct Pizza {
         }
         
         print("Which size?")
+        print("[s] = small")
+        print("[m] = medium")
+        print("[l] = large")
+        print("[el] = extra large")
+        print("[eel] = extra extra large")
+        print("[eeel] = extra extra extra large")
         guard let input = readLine() else { fatalError() }
         guard let size = Size(rawValue: input) else { fatalError() }
         

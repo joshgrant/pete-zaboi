@@ -81,7 +81,7 @@ struct Order {
         let pizza = Pizza(size: .large, ingredients: ingredients)
         let order = Order(pizzas: [pizza],
                           sides: sides,
-                          request:  "Ey yo I wanna pizza, now bitch.",
+                          request: "Ey yo I wanna pizza, now bitch.",
                           price: 10)
         return order
     }()

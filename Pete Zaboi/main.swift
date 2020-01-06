@@ -50,13 +50,13 @@ class Game {
     
     static func orderPlaced() {
         print("Ring a ding a dingy.")
-        print("Pick up the phone?")
+        print("Pick up the thingy (phone) [y/n]?")
         if getChoice() {
             // Somebody places an order
             let order = Order.makeRandomOrder()
             print(order.request)
             
-            var ingredientsMatch: Bool = false
+            var ingredientsMatch: Bool = true
             
             for pizza in order.pizzas {
                 let thePizzaWeMade = Pizza.makeAPizza()
@@ -67,9 +67,24 @@ class Game {
                 }
             }
             
-            if ingredientsMatch {
+            print("Time to add the sides. Enter one at a time:")
+            let sides = Side.gather()
+            
+            var sidesMatch: Bool = true
+            
+            let ourSortedSides = Side.sortSides(sides)
+            let orderSortedSides = Side.sortSides(order.sides)
+            
+            if !ourSortedSides.elementsEqual(orderSortedSides) {
+                sidesMatch = false
+            }
+            
+            if ingredientsMatch && sidesMatch {
                 print("Thanks for making the pizza! Here's your money: \(order.price)")
+                let tip = Int.random(in: 5...10)
+                print("And here's a tip: \(tip)")
                 money += order.price
+                money += tip
             } else {
                 print("Hey! This isn't what I ordered. I'm not paying you, jerk!!!")
             }
@@ -82,7 +97,6 @@ class Game {
         print("End of day! You have \(money) credits.")
         age += 1
     }
-    
 }
 
 Game.start()
