@@ -43,4 +43,10 @@ enum Ingredient: String, CaseIterable {
         
         return ingredients
     }
+    
+    static func sortIngredients(_ ingredients: [Ingredient]) -> [Ingredient] {
+        return ingredients.sorted { (first, second) -> Bool in
+            first.rawValue > second.rawValue
+        }
+    }
 }

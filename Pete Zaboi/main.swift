@@ -55,14 +55,24 @@ class Game {
             // Somebody places an order
             let order = Order.makeRandomOrder()
             print(order.request)
-            let thePizzaWeMade = Pizza.makeAPizza()
+            
+            var ingredientsMatch: Bool = false
             
             for pizza in order.pizzas {
-                for ingredient in pizza.ingredients {
-                    // Determine if the order matches what we made...
+                let thePizzaWeMade = Pizza.makeAPizza()
+                let ourSortedIngredients = Ingredient.sortIngredients(thePizzaWeMade.ingredients)
+                let orderSortedIngredients = Ingredient.sortIngredients(pizza.ingredients)
+                if !ourSortedIngredients.elementsEqual(orderSortedIngredients) {
+                    ingredientsMatch = false
                 }
             }
             
+            if ingredientsMatch {
+                print("Thanks for making the pizza! Here's your money: \(order.price)")
+                money += order.price
+            } else {
+                print("Hey! This isn't what I ordered. I'm not paying you, jerk!!!")
+            }
         } else {
             print("You ignore the phone.")
         }
