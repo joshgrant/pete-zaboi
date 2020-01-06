@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0360037423B22D8400963AD0 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0360037323B22D8400963AD0 /* main.swift */; };
+		0360037B23B2441100963AD0 /* Pizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0360037A23B2441100963AD0 /* Pizza.swift */; };
+		0360037D23B2441F00963AD0 /* Side.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0360037C23B2441F00963AD0 /* Side.swift */; };
+		0360037F23B2442E00963AD0 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0360037E23B2442E00963AD0 /* Ingredient.swift */; };
+		0360038123B2445000963AD0 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0360038023B2445000963AD0 /* Order.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +29,10 @@
 /* Begin PBXFileReference section */
 		0360037023B22D8400963AD0 /* Pete Zaboi */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Pete Zaboi"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0360037323B22D8400963AD0 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		0360037A23B2441100963AD0 /* Pizza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pizza.swift; sourceTree = "<group>"; };
+		0360037C23B2441F00963AD0 /* Side.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Side.swift; sourceTree = "<group>"; };
+		0360037E23B2442E00963AD0 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
+		0360038023B2445000963AD0 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,10 @@
 			isa = PBXGroup;
 			children = (
 				0360037323B22D8400963AD0 /* main.swift */,
+				0360037A23B2441100963AD0 /* Pizza.swift */,
+				0360037C23B2441F00963AD0 /* Side.swift */,
+				0360037E23B2442E00963AD0 /* Ingredient.swift */,
+				0360038023B2445000963AD0 /* Order.swift */,
 			);
 			path = "Pete Zaboi";
 			sourceTree = "<group>";
@@ -120,7 +132,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0360037F23B2442E00963AD0 /* Ingredient.swift in Sources */,
+				0360037B23B2441100963AD0 /* Pizza.swift in Sources */,
+				0360038123B2445000963AD0 /* Order.swift in Sources */,
 				0360037423B22D8400963AD0 /* main.swift in Sources */,
+				0360037D23B2441F00963AD0 /* Side.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
